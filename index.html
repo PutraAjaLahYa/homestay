@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class ="logo"rel="icon" type="image/png" href="14.jpg">
+  <meta name="description" content="Telaga Sakinah Homestay - Penginapan nyaman, asri, strategis di Siak Riau. Fasilitas lengkap: kamar AC, dapur, WiFi, parkiran luas.">
+  <meta name="keywords" content="Homestay Siak, Penginapan Riau, Telaga Sakinah Homestay, sewa rumah harian, sewa kamar murah">
+  <meta name="author" content="Telaga Sakinah Homestay">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2ec4b6;
+      --secondary: #3a86ff;
+      --accent: #ffbe0b;
+      --dark: #1d1d1d;
+      --light: #f9f9f9;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+
+    header {
+      position: relative;
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+        url('') center/cover no-repeat,
+        url('16.png') center no-repeat;
+      background-size: cover, cover, 300px auto;
+      background-position: center, center, center;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    header p {
+      font-size: 1.3em;
+      margin-top: 15px;
+    }
+    /* --- Responsif --- */ @media (max-width: 992px) { header { padding: 80px 20px; background-size: cover, cover, 200px auto; /* perkecil logo */ } header h1 { font-size: 2.5em; } header p { font-size: 1.1em; } } @media (max-width: 600px) { header { padding: 60px 15px; background-size: cover, cover, 150px auto; /* logo makin kecil */ } header h1 { font-size: 1.8em; } header p { font-size: 1em; } }
+    section { padding: 70px 20px; max-width: 1200px; margin: auto; }
+    h2 {
+      text-align: center; margin-bottom: 40px;
+      font-size: 2.2em; color: var(--primary); position: relative;
+    }
+    h2::after {
+      content: ""; display: block; width: 60px; height: 4px;
+      background: var(--secondary); margin: 10px auto; border-radius: 2px;
+    }
+
+    /* Harga */
+    .harga {
+      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    }
+    .card {
+      background: white; padding: 35px; border-radius: 20px;
+      width: 300px; text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      transition: transform .3s, background .3s;
+    }
+    .card:hover { transform: translateY(-8px); background: var(--secondary); color: white; }
+    .card h3 { margin: 10px 0; }
+    .card p { font-size: 1.5em; font-weight: bold; color: var(--primary); }
+    .card:hover p { color: var(--accent); }
+
+    /* Kontak */
+ /* Kontak Section */
+.kontak {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.kontak h2 {
+  font-size: 2em;
+  color: var(--primary);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.kontak h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: var(--secondary);
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* Container */
+.kontak .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Tombol Sosmed */
+.kontak a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--secondary);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kontak a i {
+  font-size: 1.3em;
+}
+
+/* Hover efek */
+.kontak a:hover {
+  background: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+    /* Fasilitas */
+    .fasilitas {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px; text-align: center;
+    }
+    .fasilitas div {
+      background: white; padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform .3s;
+    }
+    .fasilitas div:hover { transform: translateY(-6px); background: var(--primary); color: white; }
+
+    /* Galeri */
+    .galeri {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+      gap: 25px;
+    }
+    .galeri img {
+      width: 100%; border-radius: 15px; height: 180px; object-fit: cover;
+      cursor: pointer; transition: transform .3s;
+    }
+    .galeri img:hover { transform: scale(1.05); }
+    .galeri div { text-align: center; font-weight: bold; margin-top: 5px; }
+
+    /* Modal lightbox */
+    .modal {
+      display: none; position: fixed; z-index: 9999; left: 0; top: 0;
+      width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+      justify-content: center; align-items: center;
+    }
+    .modal img {
+      max-width: 90%; max-height: 80%; border-radius: 15px;
+    }
+    .modal span {
+      position: absolute; top: 20px; right: 35px; font-size: 40px;
+      color: white; cursor: pointer;
+    }
+
+    /* Lokasi */
+    .lokasi iframe {
+      width: 100%; border-radius: 15px; border: none; height: 450px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      text-align: center; padding: 25px;
+      background: var(--dark); color: white; margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Telaga Sakinah Homestay</h1>
+  <p>Selamat Datang Di Homestay kami Yang Nyaman, Asri, dan Strategis untuk Keluarga Anda</p>
+</header>
+
+<!-- Harga Sewa -->
+<section>
+  <h2>Harga Sewa</h2>
+  <div class="harga">
+      <div class="card">
+        <h3>Sewa Kamar Non AC</h3>
+        <p>Rp 80.000 / Hari</p>
+      </div>
+    <div class="card">
+      <h3>Sewa Kamar AC</h3>
+      <p>Rp 100.000 / Hari</p>
+    </div>
+    <div class="card">
+      <h3>Full House</h3>
+      <p>Rp 600.000 / Hari</p>
+    </div>
+  </div>
+</section>
+
+<!-- Kontak -->
+<section class="kontak">
+  <h2> Ingin Memesan? Hubungi Kami</h2>
+  <div class="container">
+    <a href="https://wa.me/6281275616405" target="_blank"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+    <a href="https://instagram.com/telagasakinah_mempurahomestay" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+  </div>
+</section>
+
+<!-- Fasilitas -->
+<section>
+  <h2>Fasilitas yang Tersedia</h2>
+  <div class="fasilitas">
+    <div>🛏️ Kamar Tidur</div>
+    <div>❄️ AC & Water Cooler</div>
+    <div>🍳 Dapur & Peralatan Masak</div>
+    <div>📶 Free WiFi</div>
+    <div>🛋️ Ruang Tamu Luas</div>
+    <div>🚗 Parkiran Luas</div>
+  </div>
+</section>
+
+<!-- Galeri -->
+<section>
+  <h2>Galeri Homestay</h2>
+  <div class="galeri">
+    <div><img src="1.jpg" alt="Kamar 1"><p>Kamar Tidur 1 WC Dalam + AC</p></div>
+    <div><img src="2.jpeg" alt="Kamar 2"><p>Kamar Tidur 2 WC Dalam + AC</p></div>
+    <div><img src="3.jpeg" alt="Kamar 3"><p>Kamar Tidur 3 WC Dalam + AC</p></div>
+    <div><img src="4.jpeg" alt="Kamar 4"><p>Kamar Tidur 4 WC Dalam + AC</p></div>
+    <div><img src="6.jpeg" alt="Kamar 5"><p>Kamar Tidur 5 WC Luar + Water Cooler</p></div>
+    <div><img src="7.jpeg" alt="Kamar 6"><p>Kamar Tidur 6 WC Luar + Water Cooler</p></div>
+    <div><img src="5.jpeg" alt="Dapur"><p>Dapur + Peralatan Masak</p></div>
+    <div><img src="8.jpeg" alt="WC Utama"><p>WC Utama</p></div>
+    <div><img src="9.jpeg" alt="Ruang Tamu"><p>Ruang Tamu</p></div>
+    <div><img src="10.jpeg" alt="Loby"><p>Loby</p></div>
+    <div><img src="11.jpeg" alt="Parkiran"><p>Parkiran</p></div>
+    <div><img src="12.jpeg" alt="Tampak Depan"><p>Tampak Depan Rumah</p></div>
+  </div>
+</section>
+
+<!-- Modal lightbox -->
+<div id="lightbox" class="modal">
+  <span id="closeBtn">&times;</span>
+  <img id="lightboxImg" src="">
+</div>
+
+<!-- Lokasi -->
+<section>
+  <h2>Lokasi Kami</h2>
+  <p style="text-align:center;">Alamat: Jl. Telaga Sakinah No. 123, Siak, Riau, Indonesia</p>
+  <div class="lokasi">
+    <iframe src="https://www.google.com/maps?q=0.7794738753949094,102.05229632401684&hl=id&z=15&output=embed"
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Telaga Sakinah Homestay - Siak, Riau</p>
+</footer>
+
+<script>
+  // Lightbox
+  const modal = document.getElementById("lightbox");
+  const modalImg = document.getElementById("lightboxImg");
+  const closeBtn = document.getElementById("closeBtn");
+  const images = document.querySelectorAll(".galeri img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => { modal.style.display = "none"; }
+  modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
+</script>
+
+</body>
+</html>
