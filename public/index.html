@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="/14.jpg">
+<link rel="icon" type="image/jpeg" href="https://telagasakinahmempurahomestay.com/14.jpg">
 
 <!-- SEO Meta -->
 <title>Telaga Sakinah Homestay - Penginapan Nyaman di Siak Riau</title>
@@ -16,7 +16,7 @@
 <!-- Open Graph (untuk Facebook, WhatsApp, Instagram) -->
 <meta property="og:title" content="Telaga Sakinah Homestay - Penginapan Nyaman di Siak Riau">
 <meta property="og:description" content="Nikmati penginapan nyaman, asri, dan strategis dengan fasilitas lengkap. Telaga Sakinah Homestay cocok untuk keluarga dan rombongan di Siak Riau.">
-<meta property="og:image" content="https://telagasakinahmempurahomestay.com/14.jpg"> <!-- ganti dengan link gambar logo/cover -->
+<meta property="og:image" content="https://telagasakinahmempurahomestay.com/14.jpg">
 <meta property="og:url" content="https://telagasakinahmempurahomestay.com">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="id_ID">
@@ -82,19 +82,44 @@
     }
 
     /* Harga */
-    .harga {
-      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-    }
-    .card {
-      background: white; padding: 35px; border-radius: 20px;
-      width: 300px; text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-      transition: transform .3s, background .3s;
-    }
-    .card:hover { transform: translateY(-8px); background: var(--secondary); color: white; }
-    .card h3 { margin: 10px 0; }
-    .card p { font-size: 1.5em; font-weight: bold; color: var(--primary); }
-    .card:hover p { color: var(--accent); }
+   /* Harga */
+/* Harga */
+.harga {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform .3s, background .3s;
+}
+
+.card:hover { 
+  transform: translateY(-6px); 
+  background: var(--secondary); 
+  color: white; 
+}
+
+.card h3 { margin: 10px 0; }
+.card p { font-size: 1.3em; font-weight: bold; color: var(--primary); }
+.card:hover p { color: var(--accent); }
+
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  .harga {
+    grid-template-columns: repeat(2, 1fr); /* selalu 2 kolom di tablet/HP */
+  }
+}
 
     /* Kontak */
  /* Kontak Section */
@@ -156,17 +181,34 @@
 }
 
     /* Fasilitas */
-    .fasilitas {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px; text-align: center;
-    }
-    .fasilitas div {
-      background: white; padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform .3s;
-    }
-    .fasilitas div:hover { transform: translateY(-6px); background: var(--primary); color: white; }
+.fasilitas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.fasilitas div {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform .3s;
+}
+
+.fasilitas div:hover {
+  transform: translateY(-6px);
+  background: var(--primary);
+  color: white;
+}
+
+/* Responsif untuk HP: tetap 2 kolom */
+@media (max-width: 768px) {
+  .fasilitas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
 
     /* Galeri */
     .galeri {
@@ -209,7 +251,7 @@
 <body>
 
 <header>
-  <h1>Telaga Sakinah Homestay</h1>
+  <h1>Telaga Sakinah mempura Homestay</h1>
   <p>Selamat Datang Di Homestay kami Yang Nyaman, Asri, dan Strategis untuk Keluarga Anda</p>
 </header>
 
@@ -218,16 +260,20 @@
   <h2>Harga Sewa</h2>
   <div class="harga">
       <div class="card">
-        <h3>Sewa Kamar Non AC</h3>
-        <p>Rp 80.000 / Hari</p>
+        <h3>Sewa Kamar Water coller</h3>
+        <p>80.000 / Hari</p>
       </div>
     <div class="card">
       <h3>Sewa Kamar AC</h3>
-      <p>Rp 100.000 / Hari</p>
+      <p>120.000 / Hari</p>
+    </div>
+    <div class="card">
+      <h3>Sewa family room</h3>
+      <p>150.000 / Hari</p>
     </div>
     <div class="card">
       <h3>Full House</h3>
-      <p>Rp 600.000 / Hari</p>
+      <p>600.000 / Hari</p>
     </div>
   </div>
 </section>
@@ -259,17 +305,18 @@
   <h2>Galeri Homestay</h2>
   <div class="galeri">
     <div><img src="1.jpg" alt="Kamar 1"><p>Kamar Tidur 1 WC Dalam + AC</p></div>
-    <div><img src="2.jpeg" alt="Kamar 2"><p>Kamar Tidur 2 WC Dalam + AC</p></div>
-    <div><img src="3.jpeg" alt="Kamar 3"><p>Kamar Tidur 3 WC Dalam + AC</p></div>
+    <div><img src="2.jpg" alt="Kamar 2"><p>Kamar Tidur 2 WC Dalam + AC</p></div>
+    <div><img src="3.jpg" alt="Kamar 3"><p>Kamar Tidur 3 WC Dalam + AC</p></div>
     <div><img src="4.jpeg" alt="Kamar 4"><p>Kamar Tidur 4 WC Dalam + AC</p></div>
     <div><img src="6.jpeg" alt="Kamar 5"><p>Kamar Tidur 5 WC Luar + Water Cooler</p></div>
     <div><img src="7.jpeg" alt="Kamar 6"><p>Kamar Tidur 6 WC Luar + Water Cooler</p></div>
     <div><img src="5.jpeg" alt="Dapur"><p>Dapur + Peralatan Masak</p></div>
     <div><img src="8.jpeg" alt="WC Utama"><p>WC Utama</p></div>
-    <div><img src="9.jpeg" alt="Ruang Tamu"><p>Ruang Tamu</p></div>
-    <div><img src="10.jpeg" alt="Loby"><p>Loby</p></div>
+    <div><img src="9.jpg" alt="Ruang Tamu"><p>Ruang Tamu</p></div>
+    <div><img src="10.jpg" alt="Ruang Tengah"><p>Ruang Tengah</p></div>
+    <div><img src="16.jpg" alt="Loby"><p>Loby</p></div>
     <div><img src="11.jpeg" alt="Parkiran"><p>Parkiran</p></div>
-    <div><img src="12.jpeg" alt="Tampak Depan"><p>Tampak Depan Rumah</p></div>
+    <div><img src="12.jpg" alt="Tampak Depan"><p>Tampak Depan Rumah</p></div>
   </div>
 </section>
 
