@@ -81,16 +81,14 @@
       background: var(--secondary); margin: 10px auto; border-radius: 2px;
     }
 
-    /* Harga */
-   /* Harga */
 /* Harga */
 .harga {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
   justify-content: center;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .card {
@@ -99,7 +97,7 @@
   border-radius: 18px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  transition: transform .3s, background .3s;
+  transition: transform .3s, background .3s, color .3s;
 }
 
 .card:hover { 
@@ -108,20 +106,43 @@
   color: white; 
 }
 
-.card h3 { margin: 10px 0; }
-.card p { font-size: 1.3em; font-weight: bold; color: var(--primary); }
-.card:hover p { color: var(--accent); }
+.card h3 { 
+  margin-bottom: 15px; 
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+.card ul li {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--primary);
+  margin: 8px 0;
+}
+
+.card:hover ul li {
+  color: var(--accent);
+}
 
 /* Responsif */
 @media (max-width: 768px) {
   .harga {
-    grid-template-columns: repeat(2, 1fr); /* selalu 2 kolom di tablet/HP */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-    /* Kontak */
+@media (max-width: 480px) {
+  .harga {
+    grid-template-columns: 1fr;
+  }
+}
+
+
  /* Kontak Section */
 .kontak {
   text-align: center;
@@ -259,24 +280,49 @@
 <section>
   <h2>Harga Sewa</h2>
   <div class="harga">
-      <div class="card">
-        <h3>Sewa Kamar Water coller</h3>
-        <p>80.000 / Hari</p>
-      </div>
     <div class="card">
-      <h3>Sewa Kamar AC</h3>
-      <p>120.000 / Hari</p>
+      <h3>Single (Air Cooler, WC luar)</h3>
+      <ul>
+        <li>IDR 80.000 / malam</li>
+        <li>IDR 500.000 / minggu</li>
+        <li>IDR 1.500.000 / bulan</li>
+      </ul>
     </div>
     <div class="card">
-      <h3>Sewa family room</h3>
-      <p>150.000 / Hari</p>
+      <h3>Single (AC, WC luar)</h3>
+      <ul>
+        <li>IDR 100.000 / malam</li>
+        <li>IDR 600.000 / minggu</li>
+        <li>IDR 1.800.000 / bulan</li>
+      </ul>
     </div>
     <div class="card">
-      <h3>Full House</h3>
-      <p>600.000 / Hari</p>
+      <h3>Twin</h3>
+      <ul>
+        <li>IDR 150.000 / malam</li>
+        <li>IDR 900.000 / minggu</li>
+        <li>IDR 2.700.000 / bulan</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Deluxe</h3>
+      <ul>
+        <li>IDR 180.000 / malam</li>
+        <li>IDR 1.100.000 / minggu</li>
+        <li>IDR 3.200.000 / bulan</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Full House (4 kamar)</h3>
+      <ul>
+        <li>IDR 600.000 / malam</li>
+        <li>IDR 3.500.000 / minggu</li>
+        <li>IDR 10.000.000 / bulan</li>
+      </ul>
     </div>
   </div>
 </section>
+
 
 <!-- Kontak -->
 <section class="kontak">
@@ -307,16 +353,16 @@
     <div><img src="1.jpg" alt="Kamar 1"><p>Kamar Tidur 1 WC Dalam + AC</p></div>
     <div><img src="2.jpg" alt="Kamar 2"><p>Kamar Tidur 2 WC Dalam + AC</p></div>
     <div><img src="3.jpg" alt="Kamar 3"><p>Kamar Tidur 3 WC Dalam + AC</p></div>
-    <div><img src="4.jpeg" alt="Kamar 4"><p>Kamar Tidur 4 WC Dalam + AC</p></div>
-    <div><img src="6.jpeg" alt="Kamar 5"><p>Kamar Tidur 5 WC Luar + Water Cooler</p></div>
-    <div><img src="7.jpeg" alt="Kamar 6"><p>Kamar Tidur 6 WC Luar + Water Cooler</p></div>
-    <div><img src="5.jpeg" alt="Dapur"><p>Dapur + Peralatan Masak</p></div>
-    <div><img src="8.jpeg" alt="WC Utama"><p>WC Utama</p></div>
+    <div><img src="20.jpg" alt="Kamar 4"><p>Kamar Tidur 4 WC Dalam + AC</p></div>
+    <div><img src="20.jpg" alt="Kamar 5"><p>Kamar Tidur 5 WC Luar + Water Cooler</p></div>
+    <div><img src="20.jpg" alt="Kamar 6"><p>Kamar Tidur 6 WC Luar + Water Cooler</p></div>
+    <div><img src="20.jpg" alt="Dapur"><p>Dapur + Peralatan Masak</p></div>
+    <div><img src="20.jpg" alt="WC Utama"><p>WC Utama</p></div>
     <div><img src="9.jpg" alt="Ruang Tamu"><p>Ruang Tamu</p></div>
     <div><img src="10.jpg" alt="Ruang Tengah"><p>Ruang Tengah</p></div>
     <div><img src="16.jpg" alt="Loby"><p>Loby</p></div>
-    <div><img src="11.jpeg" alt="Parkiran"><p>Parkiran</p></div>
-    <div><img src="12.jpg" alt="Tampak Depan"><p>Tampak Depan Rumah</p></div>
+    <div><img src="20.jpg" alt="Parkiran"><p>Parkiran</p></div>
+    <div><img src="20.jpg" alt="Tampak Depan"><p>Tampak Depan Rumah</p></div>
   </div>
 </section>
 
