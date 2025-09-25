@@ -142,6 +142,139 @@
   }
 }
 
+/* Biaya Paket Layout */
+/* Kasih jarak antar card */
+.paket .card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  margin: 30px 0; /* kasih jarak antar container */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paket .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Hilangin container belakang opsi-wrapper */
+.paket .card.biaya-paket {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+/* Opsi wrapper flex */
+.opsi-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Style masing-masing opsi card */
+.opsi {
+  flex: 1 1 300px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opsi:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(101, 219, 4, 0.15);
+  color :#26a69a;
+}
+
+/* Table Style */
+.opsi table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.opsi table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.opsi table .subtotal td {
+  font-weight: bold;
+  background: #f3f9f3;
+  color: #2e7d32;
+}
+
+
+/* Card Style Umum */
+/* Termasuk Paket 2 kolom */
+.termasuk-paket .paket-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.termasuk-paket .paket-left,
+.termasuk-paket .paket-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.termasuk-paket .paket-right {
+text-align: left;
+}
+.termasuk-paket h4 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* City tour list lebih rapi */
+.city-tour li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Responsif di HP */
+@media (max-width: 768px) {
+  .termasuk-paket .paket-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Hover biar tulisan tetap kelihatan */
+/* Hover biar tulisan tetap kelihatan */
+.paket .card:hover h3,
+.paket .card:hover h4,
+.paket .card:hover p,
+.paket .card:hover li,
+.paket .card:hover td {
+  color: #222 !important;
+}
+
+
+/* Highlight Box */
+.paket .highlight {
+  background: linear-gradient(135deg, #e0f7fa, #e9f8ef);
+  border: 2px solid #26a69a;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Responsive selalu 2 kolom */
+@media (max-width: 768px) {
+  .opsi-wrapper {
+    flex-direction: row;
+  }
+  .opsi {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
 
  /* Kontak Section */
 .kontak {
@@ -323,13 +456,82 @@
   </div>
 </section>
 
+<section class="paket">
+  <h2>Paket City Tour Siak + Jemput Antar Bandara/Pelabuhan <br><small>(max 7 orang)</small></h2>
 
-<!-- Kontak -->
-<section class="kontak">
-  <h2> Ingin Memesan? Hubungi Kami</h2>
-  <div class="container">
-    <a href="https://wa.me/6281275616405" target="_blank"><i class="fab fa-whatsapp"></i>Whatsapp</a>
-    <a href="https://instagram.com/telagasakinah_mempurahomestay" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+  <!-- Fasilitas Homestay -->
+  <div class="card">
+    <h3>🏡 Fasilitas Homestay</h3>
+    <ul>
+      <li>Full house (4 kamar) – kapasitas 7 orang</li>
+      <li>Ruang tamu, dapur, parkir</li>
+      <li>Suasana tenang & nyaman</li>
+    </ul>
+  </div>
+
+  <!-- Termasuk Paket -->
+<div class="card termasuk-paket">
+  <h3>🚐 Termasuk Paket</h3>
+  <div class="paket-wrapper">
+    <div class="paket-left">
+      <ul>
+        <li>Jemput & antar Bandara Pekanbaru atau Pelabuhan Buton</li>
+        <li>Transport mobil Terios + sopir + BBM + makan sopir</li>
+        <li>1 malam menginap di Telaga Sakinah Homestay (full house)</li>
+      </ul>
+    </div>
+    <div class="paket-right">
+      <h4>City tour Siak:</h4>
+      <ul class="city-tour">
+        <li>✅ Istana Siak Sri Indrapura</li>
+        <li>✅ Masjid Raya Syahabuddin</li>
+        <li>✅ Tangsi Belanda</li>
+        <li>✅ Desa Wisata Dayun (Opsional)</li>
+        <li>✅ Jembatan Tengku Agung Sultanah Latifah</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+ <!-- Biaya Paket -->
+<div class="card biaya-paket">
+  <h3>💰 Biaya Paket</h3>
+  <div class="opsi-wrapper">
+    <div class="opsi">
+      <h4>Opsi 1 — Jemput/Pulang Bandara Pekanbaru</h4>
+      <table>
+        <tr><td>Transport (Terios + sopir + BBM)</td><td>Rp 1.200.000</td></tr>
+        <tr><td>Homestay full house (1 malam, max 7 orang)</td><td>Rp 600.000</td></tr>
+        <tr class="subtotal"><td>Subtotal Tetap</td><td>Rp 1.800.000</td></tr>
+      </table>
+    </div>
+
+    <div class="opsi">
+      <h4>Opsi 2 — Jemput/Pulang Pelabuhan Buton</h4>
+      <table>
+        <tr><td>Transport (Buton – Homestay PP)</td><td>Rp 300.000</td></tr>
+        <tr><td>Homestay full house (1 malam, max 7 orang)</td><td>Rp 600.000</td></tr>
+        <tr class="subtotal"><td>Subtotal Tetap</td><td>Rp 900.000</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+  <!-- Biaya Tambahan -->
+  <div class="card">
+    <h3>NOTE :</h3>
+    <ul>
+      <li>🎟 Tiket masuk wisata: ± Rp 10.000 – Rp 25.000/orang/tempat</li>
+      <li>🍴 Makan siang & malam: ± Rp 25.000 – Rp 75.000/orang/sekali makan</li>
+    </ul>
+    <p><strong>👉 Estimasi total biaya tambahan utk 7 orang:</strong> Rp 1.000.000 – Rp 1.500.000</p>
+  </div>
+
+  <!-- Estimasi Total Paket -->
+  <div class="card highlight">
+    <h3>🔖 Estimasi Total Paket</h3>
+    <p><strong>Dari Pekanbaru:</strong> Rp 2.800.000 – Rp 3.300.000</p>
+    <p><strong>Dari Pelabuhan Buton:</strong> Rp 1.900.000 – Rp 2.400.000</p>
   </div>
 </section>
 
@@ -371,6 +573,16 @@
   <span id="closeBtn">&times;</span>
   <img id="lightboxImg" src="">
 </div>
+
+<!-- Kontak -->
+<section class="kontak">
+  <h2> Ingin Memesan? Hubungi Kami</h2>
+  <div class="container">
+    <a href="https://wa.me/6281275616405" target="_blank"><i class="fab fa-whatsapp"></i>Zul Azmi</a>
+    <a href="https://wa.me/6281914666105" target="_blank"><i class="fab fa-whatsapp"></i>Fahmisyahwani</a>
+    <a href="https://instagram.com/telagasakinah_mempurahomestay" target="_blank"><i class="fab fa-instagram"></i>telagasakinah_mempurahomestay</a>
+  </div>
+</section>
 
 <!-- Lokasi -->
 <section>
