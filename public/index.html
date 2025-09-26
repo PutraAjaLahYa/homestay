@@ -70,14 +70,22 @@
       margin-top: 15px;
     }
     /* --- Responsif --- */ @media (max-width: 992px) { header { padding: 80px 20px; background-size: cover, cover, 200px auto; /* perkecil logo */ } header h1 { font-size: 2.5em; } header p { font-size: 1.1em; } } @media (max-width: 600px) { header { padding: 60px 15px; background-size: cover, cover, 150px auto; /* logo makin kecil */ } header h1 { font-size: 1.8em; } header p { font-size: 1em; } }
-    section { padding: 70px 20px; max-width: 1200px; margin: auto; }
+section {
+  padding: 20px 20px 50px; /* atas 40px, kanan/kiri 20px, bawah 50px */
+  max-width: 1200px;
+  margin: auto;
+}
     h2 {
       text-align: center; margin-bottom: 40px;
       font-size: 2.2em; color: var(--primary); position: relative;
     }
     h2::after {
-      content: ""; display: block; width: 60px; height: 4px;
-      background: var(--secondary); margin: 10px auto; border-radius: 2px;
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      margin: 10px auto; border-radius: 2px;
     }
 
 /* Harga */
@@ -142,7 +150,12 @@
 }
 
 /* Biaya Paket Layout */
-/* Kasih jarak antar card */
+
+.paket h2 {
+  font-size: 1em;
+  display: block;
+  margin-top: 5px;
+}
 .paket .card {
   background: #fff;
   border-radius: 14px;
@@ -183,6 +196,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
+  font-size: 0.9em;
 }
 
 .opsi:hover {
@@ -201,12 +215,14 @@
   padding: 10px;
   border-bottom: 1px solid #eee;
   color: #333;
+  font-size: 0.6em;
 }
 
 .opsi table .subtotal td {
   font-weight: bold;
   background: #f3f9f3;
   color: #2e7d32;
+  font-size: 0.6em;
 }
 
 
@@ -260,7 +276,7 @@ text-align: left;
 .paket .card:hover p,
 .paket .card:hover li,
 .paket .card:hover td {
-  color: #222 !important;
+  color:#26a69a!important;
 }
 
 
@@ -269,7 +285,7 @@ text-align: left;
   background: linear-gradient(135deg, #e0f7fa, #e9f8ef);
   border: 2px solid #26a69a;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -319,6 +335,8 @@ text-align: left;
 .kontak a {
   display: flex;
   align-items: center;
+  justify-content: center; /* ini bikin konten (ikon+teks) rata tengah */
+  width: 100%;
   gap: 10px;
   background: var(--secondary);
   color: white;
@@ -330,6 +348,7 @@ text-align: left;
   transition: all .3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
 
 .kontak a i {
   font-size: 1.3em;
@@ -344,18 +363,27 @@ text-align: left;
 
     /* Fasilitas */
 .fasilitas {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 25px;
-  text-align: center;
 }
 
 .fasilitas div {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ini bikin konten (ikon+teks) rata tengah */
+  width: 100%;
+  gap: 10px;
+  background: var(--secondary);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .fasilitas div:hover {
@@ -378,11 +406,21 @@ text-align: left;
       gap: 25px;
     }
     .galeri img {
-      width: 100%; border-radius: 15px; height: 180px; object-fit: cover;
-      cursor: pointer; transition: transform .3s;
+      width: 95%;
+      border-radius: 15px;
+      height: 180px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform .3s;
     }
-    .galeri img:hover { transform: scale(1.05); }
-    .galeri div { text-align: center; font-weight: bold; margin-top: 5px; }
+    .galeri img:hover {
+      transform: scale(1.05);
+    }
+    .galeri div {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5px;
+    }
 
     /* Modal lightbox */
     .modal {
@@ -419,7 +457,7 @@ text-align: left;
 
 <!-- Harga Sewa -->
 <section>
-  <h2>Harga Sewa</h2>
+  <h2 style="font-size: 1em;">Harga Sewa</h2>
   <div class="harga">
     <div class="card">
       <h3>Single (Water Cooler, WC Luar)</h3>
@@ -471,9 +509,9 @@ text-align: left;
   <div class="card">
     <h3>Fasilitas Homestay 🏡</h3>
     <ul>
-      <li>Full House (4 Kamar) – Kapasitas 7 Orang</li>
-      <li>Ruang Tamu, Dapur, Parkir</li>
-      <li>Suasana Tenang & Nyaman</li>
+      <li style="font-size: 0.9em; color: black;">Full House (4 Kamar) – Kapasitas 7 Orang</li>
+      <li style="font-size: 0.9em; color: black;">Ruang Tamu, Dapur, Parkir</li>
+      <li style="font-size: 0.9em; color: black;">Suasana Tenang & Nyaman</li>
     </ul>
   </div>
 
@@ -483,19 +521,19 @@ text-align: left;
   <div class="paket-wrapper">
     <div class="paket-left">
       <ul>
-        <li>Jemput & Antar Bandara Pekanbaru Atau Pelabuhan Buton</li>
-        <li>Transportasi mobil Terios + Supir + BBM + Makan Sopir</li>
-        <li>1 Malam Menginap Di Telaga Sakinah Mempura Homestay (Full House)</li>
+        <li style="font-size: 0.9em; color: black;">Jemput & Antar Bandara Pekanbaru Atau Pelabuhan Buton</li>
+        <li style="font-size: 0.9em; color: black;">Transportasi mobil Terios + Supir + BBM + Makan Sopir</li>
+        <li style="font-size: 0.9em; color: black;">1 Malam Menginap Di Telaga Sakinah Mempura Homestay (Full House)</li>
       </ul>
     </div>
     <div class="paket-right">
       <h4>City Tour Siak:</h4>
       <ul class="city-tour">
-        <li>✅ Istana Siak Sri Indrapura</li>
-        <li>✅ Masjid Raya Syahabuddin</li>
-        <li>✅ Tangsi Belanda</li>
-        <li>✅ Desa Wisata Dayun (Opsional)</li>
-        <li>✅ Jembatan Tengku Agung Sultanah Latifah</li>
+        <li style="font-size: 0.9em; color: black;">✅ Istana Siak Sri Indrapura</li>
+        <li style="font-size: 0.9em; color: black;">✅ Masjid Raya Syahabuddin</li>
+        <li style="font-size: 0.9em; color: black;">✅ Tangsi Belanda</li>
+        <li style="font-size: 0.9em; color: black;">✅ Desa Wisata Dayun (Opsional)</li>
+        <li style="font-size: 0.9em; color: black;">✅ Jembatan Tengku Agung Sultanah Latifah</li>
       </ul>
     </div>
   </div>
@@ -529,8 +567,8 @@ text-align: left;
   <div class="cardnote">
     <h3>NOTE :</h3>
     <ul>
-      <li>Tiket Masuk Wisata: ± Rp 10.000 – Rp 25.000/Orang/Tempat</li>
-      <li>Makan Siang & Malam: ± Rp 25.000 – Rp 75.000/Orang/Sekali Makan</li>
+      <li style="font-size: 0.9em;">Tiket Masuk Wisata: ± Rp 10.000 – Rp 25.000/Orang/Tempat</li>
+      <li style="font-size: 0.9em;">Makan Siang & Malam: ± Rp 25.000 – Rp 75.000/Orang/Sekali Makan</li>
     </ul>
     <p><strong>Estimasi total biaya tambahan untuk 7 orang:</strong> Rp 1.000.000 – Rp 1.500.000</p>
   </div>
@@ -545,7 +583,7 @@ text-align: left;
 
 <!-- Fasilitas -->
 <section>
-  <h2>Fasilitas yang Tersedia</h2>
+  <h2 style="font-size: 1em;">Fasilitas yang Tersedia</h2>
   <div class="fasilitas">
     <div>Kamar Tidur 🛏️ </div>
     <div>AC & Water Cooler ❄️ </div>
@@ -558,7 +596,7 @@ text-align: left;
 
 <!-- Galeri -->
 <section>
-  <h2>Galeri Homestay</h2>
+  <h2 style="font-size: 1em;">Galeri Homestay</h2>
   <div class="galeri">
     <div><img src="1.jpg" alt="Kamar 1"><p>Kamar Tidur 1 WC Dalam + AC</p></div>
     <div><img src="2.jpg" alt="Kamar 2"><p>Kamar Tidur 2 WC Dalam + AC</p></div>
@@ -584,7 +622,7 @@ text-align: left;
 
 <!-- Kontak -->
 <section class="kontak">
-  <h2> Ingin Memesan? Hubungi Kami</h2>
+  <h2 style="font-size: 1em;"> Ingin Memesan? Hubungi Kami</h2>
   <div class="container">
     <a href="https://wa.me/6281275616405" target="_blank"><i class="fab fa-whatsapp"></i>Zul Azmi</a>
     <a href="https://wa.me/6281914666105" target="_blank"><i class="fab fa-whatsapp"></i>Fahmisyahwani</a>
@@ -594,7 +632,7 @@ text-align: left;
 
 <!-- Lokasi -->
 <section>
-  <h2>Lokasi Kami</h2>
+  <h2 style="font-size: 1em;">Lokasi Kami</h2>
   <p style="text-align:center;">Alamat: Jl. Telaga Sakinah No. 123, Siak, Riau, Indonesia</p>
   <div class="lokasi">
     <iframe src="https://www.google.com/maps?q=0.7794738753949094,102.05229632401684&hl=id&z=15&output=embed"
