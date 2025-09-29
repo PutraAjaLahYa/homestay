@@ -105,14 +105,29 @@ section {
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   transition: transform .3s, background .3s, color .3s;
+  border: 2px solid  #3a86ff;
 }
 
+.card2{
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform .3s, background .3s, color .3s;
+   border: 2px solid #1d1d1d81;
+}
 .card:hover { 
   transform: translateY(-6px); 
   background: var(--secondary); 
   color: white; 
 }
 
+.card2:hover { 
+  transform: translateY(-6px); 
+  background: var(--secondary); 
+  color: white; 
+}
 .card h3 { 
   margin-bottom: 15px; 
   font-size: 1.2em;
@@ -132,10 +147,31 @@ section {
   margin: 8px 0;
 }
 
+.card2 h3 { 
+  margin-bottom: 15px; 
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card2 ul li {
+  font-size: 1em;
+  font-weight: 500;
+  color: black;
+  margin: 8px 0;
+}
 .card:hover ul li {
   color: var(--accent);
 }
 
+.card2:hover ul li {
+  color: var(--accent);
+}
 /* Responsif */
 @media (max-width: 768px) {
   .harga {
@@ -470,7 +506,7 @@ text-align: left;
         <li>IDR 1.500.000 / Bulan</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card2">
       <h3>Single (AC, WC Luar)</h3>
       <ul>
         <li>IDR 100.000 / Malam</li>
@@ -486,7 +522,7 @@ text-align: left;
         <li>IDR 2.700.000 / Bulan</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card2">
       <h3>Deluxe</h3>
       <ul>
         <li>IDR 180.000 / Malam</li>
