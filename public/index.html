@@ -402,17 +402,16 @@ text-align: left;
 
     /* Fasilitas */
 .fasilitas {
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
 .fasilitas div {
   display: flex;
   align-items: center;
-  justify-content: center; /* ini bikin konten (ikon+teks) rata tengah */
-  width: 100%;
+  justify-content: center;
   gap: 10px;
   background: var(--secondary);
   color: white;
@@ -431,13 +430,19 @@ text-align: left;
   color: white;
 }
 
-/* Responsif untuk HP: tetap 2 kolom */
+/* Responsif untuk HP — tampil 2 item per baris */
 @media (max-width: 768px) {
   .fasilitas {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
+    .fasilitas div {
+    height: 50px;
+    font-size: 0.9em; /* kecilin tulisan biar rapi di layar kecil */
+    padding: 10px 18px; /* sedikit kecilin padding biar pas */
+  }
 }
+
 
     /* Galeri */
     .galeri {
@@ -506,7 +511,7 @@ text-align: left;
         <li>IDR 1.500.000 / Bulan</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card2">
       <h3>Twin</h3>
       <ul>
         <li>IDR 150.000 / Malam</li>
@@ -514,7 +519,7 @@ text-align: left;
         <li>IDR 2.700.000 / Bulan</li>
       </ul>
     </div>
-    <div class="card2">
+    <div class="card">
       <h3>Deluxe</h3>
       <ul>
         <li>IDR 180.000 / Malam</li>
@@ -522,7 +527,7 @@ text-align: left;
         <li>IDR 3.200.000 / Bulan</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card2">
       <h3>Full House (4 Kamar)</h3>
       <ul>
         <li>IDR 600.000 / Malam</li>
@@ -616,12 +621,12 @@ text-align: left;
 <section>
   <h2 style="font-size: 1.3em; color:black">Fasilitas yang Tersedia</h2>
   <div class="fasilitas">
-    <div>Kamar Tidur 🛏️ </div>
-    <div>AC & Water Cooler ❄️ </div>
-    <div>Dapur & Peralatan Masak 🍳</div>
-    <div>Free WiFi 📶</div>
-    <div>Ruang Tamu Luas 🛋️</div>
-    <div>Parkiran Luas 🚗</div>
+    <div>Kamar Tidur </div>
+    <div>AC & Water Cooler</div>
+    <div>Dapur & Peralatan Masak</div>
+    <div>Free WiFi</div>
+    <div>Ruang Tamu Luas</div>
+    <div>Parkiran Luas</div>
   </div>
 </section>
 
