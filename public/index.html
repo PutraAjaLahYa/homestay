@@ -98,7 +98,7 @@ section {
   max-width: 1000px;
 }
 
-.card {
+.card1 {
   background: white;
   padding: 25px;
   border-radius: 18px;
@@ -128,19 +128,19 @@ section {
   background: var(--secondary); 
   color: white; 
 }
-.card h3 { 
+.card1 h3 { 
   margin-bottom: 15px; 
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.card ul {
+.card1 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.card ul li {
+.card1 ul li {
   font-size: 1em;
   font-weight: 500;
   color: black;
@@ -171,6 +171,34 @@ section {
 
 .card2:hover ul li {
   color: var(--accent);
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform .3s, background .3s, color .3s;
+}
+
+.card h3 { 
+  margin-bottom: 15px; 
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  font-size: 1em;
+  font-weight: 500;
+  color: black;
+  margin: 8px 0;
 }
 /* Responsif */
 @media (max-width: 768px) {
@@ -233,6 +261,7 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
   font-size: 0.9em;
+  border: 2px solid  #3a86ff;
 }
 
 .opsi-wrapper .opsi h4 {
@@ -267,6 +296,15 @@ section {
 
 /* Card Style Umum */
 /* Termasuk Paket 2 kolom */
+.paket .card.termasuk-paket {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform .3s, background .3s, color .3s;
+  border: 2px solid  #1d1d1d81;
+}
 .termasuk-paket .paket-wrapper {
   display: flex;
   gap: 20px;
@@ -503,7 +541,7 @@ text-align: left;
 <section>
   <h2 style="font-size: 1.3em; color: black;">Harga Sewa</h2>
   <div class="harga">
-    <div class="card">
+    <div class="card1">
       <h3>Single (Air Cooler, WC Bersama)</h3>
       <ul>
         <li>IDR 80.000 / Malam</li>
@@ -519,7 +557,7 @@ text-align: left;
         <li>IDR 2.700.000 / Bulan</li>
       </ul>
     </div>
-    <div class="card">
+    <div class="card1">
       <h3>Deluxe</h3>
       <ul>
         <li>IDR 180.000 / Malam</li>
@@ -542,7 +580,7 @@ text-align: left;
   <h2 style="color: black;">Paket City Tour Siak <br>Antar Jemput Bandara/Pelabuhan <br><small>(Max 7 Orang)</small></h2>
 
   <!-- Fasilitas Homestay -->
-  <div class="card">
+  <div class="card1">
     <h3>Fasilitas Homestay 🏡</h3>
     <ul>
       <li style="font-size: 1em; color: black;">Ruang Tamu, Dapur, Parkir</li>
